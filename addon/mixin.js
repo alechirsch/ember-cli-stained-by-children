@@ -38,7 +38,7 @@ export default Mixin.create({
 
       relatedKeysHasDirty.push(key);
 
-      relatedKeysHasDirty.push(`${name}[]`);
+      relatedKeysHasDirty.push(`${name}.[]`);
     });
 
     defineProperty(this, 'hasDirtyAttributes', computed.apply(null, [
