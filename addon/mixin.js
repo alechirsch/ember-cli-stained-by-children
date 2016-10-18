@@ -37,6 +37,8 @@ export default Mixin.create({
       const key       = `${name}${keySuffix}.hasDirtyAttributes`;
 
       relatedKeysHasDirty.push(key);
+
+      relatedKeysHasDirty.push(`${name}[]`);
     });
 
     defineProperty(this, 'hasDirtyAttributes', computed.apply(null, [
